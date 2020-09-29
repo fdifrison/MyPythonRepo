@@ -6,6 +6,6 @@
 
 * CheatSheet -> where command are divided by argument
 * Codes -> where i put the "useful" codes i create
-* PythonBooks -> all the books i found usefull on the subject (ofc I have an hard copy of each one of then at home..)
+* PythonBooks -> all the books i found usefull on the subject (ofc I have an hard copy of them!)
 
 Enjoy!
