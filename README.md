@@ -1,6 +1,6 @@
 # My Python Repository
 
-## Everithing not trivial (for me ofc) that i learn on python will be in this repo.
+## Everithing not trivial (for me ofc) that i found useful
 
 ## There are 3 folders
 
