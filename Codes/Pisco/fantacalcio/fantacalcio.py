@@ -482,17 +482,17 @@ def scaricaStorico_17_19():
 
 
 
-import pickle
+# import pickle
 
-df1 = pd.read_pickle('df_2015.p')
-df2 = pd.read_pickle('df_2016.p')
-df3 = pd.read_pickle('df_2017_19.p')
-df4 = pd.read_pickle('df_2020.p')
+# df1 = pd.read_pickle('df_2015.p')
+# df2 = pd.read_pickle('df_2016.p')
+# df3 = pd.read_pickle('df_2017_19.p')
+# df4 = pd.read_pickle('df_2020.p')
 
-df = pd.concat([df1,df2,df3,df4])
-df.reset_index(drop=True, inplace=True)
-a = df.apply(pd.to_numeric, errors='ignore')
-pickle.dump(df, open('db_fantacalcio.p', 'wb'))
+# df = pd.concat([df1,df2,df3,df4])
+# df.reset_index(drop=True, inplace=True)
+# a = df.apply(pd.to_numeric, errors='ignore')
+# pickle.dump(df, open('db_fantacalcio.p', 'wb'))
 
-# df = pd.read_pickle('df_2016.p')
-df.isnull().sum()
+# # df = pd.read_pickle('df_2016.p')
+# df.isnull().sum()

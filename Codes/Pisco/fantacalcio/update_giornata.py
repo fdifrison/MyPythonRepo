@@ -1,3 +1,7 @@
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+from collections import OrderedDict
 import pandas as pd
 import pickle
 
@@ -9,11 +13,11 @@ def scaricaStorico_20():
     giornate = 11
     stagione = '2020-21'
     for g in range(giornate, giornate+1):
-        g+=1
+        # print(g)
         print(f'parsing giornata {g}/{giornate}')
         for t in team_2020_21:
             print(t)
-            url = f'https://www.fantacalcio.it/Servizi/Voti.ashx?s={stagione}&g={g}&tv=1607403898000&t={t}'
+            url = f'https://www.fantacalcio.it/Servizi/Voti.ashx?s={stagione}&g={g}&tv=1607923340000&t={t}'
             # print(url)
             data_history.append(getFanta_20(url, stagione, g))
 
@@ -21,7 +25,9 @@ def scaricaStorico_20():
     return data_history
 
 df_add = scaricaStorico_20()
+df_add = pd.concat(df_add)
 
 df = pd.read_pickle('db_fantacalcio.p')
 df = pd.concat([df,df_add])
 df.reset_index(drop=True, inplace=True)
+pickle.dump(df, open('db_fantacalcio_g11.p', 'wb'))
